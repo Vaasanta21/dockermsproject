@@ -8,7 +8,6 @@ services:
       replicas: 3
     volumes:
       - "movies"
-   
   train:
     image: siraj321/paytmtrain:latest
     ports:
@@ -17,7 +16,6 @@ services:
       replicas: 3
     volumes:
       - "train"  
-    
   dth:
     image: siraj321/paytmdth:latest
     ports:
