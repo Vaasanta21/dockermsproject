@@ -6,6 +6,8 @@ services:
       - "81:80"
     deploy:
       replicas: 3
+    volumes:
+      - "movies"
    
   train:
     image: siraj321/paytmtrain:latest
@@ -13,6 +15,8 @@ services:
       - "82:80"
     deploy:
       replicas: 3
+    volumes:
+      - "train"  
     
   dth:
     image: siraj321/paytmdth:latest
@@ -20,11 +24,14 @@ services:
       - "83:80"
     deploy:
       replicas: 3
-   
+    volumes:
+      - "dth"
   recharge:
     image: siraj321/paytmrecharge:latest
     ports:
       - "84:80"
     deploy:
       replicas: 3
+    volumes:
+      - "recharge"  
    
